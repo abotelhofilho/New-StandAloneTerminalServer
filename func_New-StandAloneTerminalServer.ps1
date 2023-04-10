@@ -14,7 +14,7 @@ function New-StandAloneTerminalServer {
     ## Set Local Server variable
     $LocalServer = $env:computername + "." + $env:userdnsdomain
     
-    Write-Host "This WILL cause the remote server to reboot" -BackgroundColor Red -ForegroundColor Black
+    Write-Verbose "This WILL cause the remote server to reboot" -BackgroundColor Red -ForegroundColor Black
 
     ## Local Server Check
     If ( $Server -eq $LocalServer ) {
